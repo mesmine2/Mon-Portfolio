@@ -23,27 +23,22 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     title: 'Frameworks & Librairies',
-    count: '6 techs',
+    count: '4 techs',
     description: 'Architecture réactive & composants',
     items: [
       { name: 'Angular (17/18)', level: 'Expert' },
       { name: 'RxJS / Signals', level: 'Expert' },
-      { name: 'NgRx Store', level: 'Avancé' },
-      { name: 'Tailwind CSS', level: 'Expert' },
-      { name: 'GraphQL / Apollo', level: 'Intermédiaire' },
+      { name: 'Bootstrap', level: 'Expert' },
       { name: 'Node.js / Express', level: 'Intermédiaire' },
     ],
   },
   {
     title: 'Outils & Environnement',
-    count: '5 techs',
+    count: '2 techs',
     description: 'Workflow, test & design-to-code',
     items: [
       { name: 'Git & GitHub CI', level: 'Avancé' },
       { name: 'Figma to Code', level: 'Avancé' },
-      { name: 'Jest / Karma Tests', level: 'Avancé' },
-      { name: 'Postman / REST APIs', level: 'Expert' },
-      { name: 'MongoDB Database', level: 'Intermédiaire' },
     ],
   },
 ];

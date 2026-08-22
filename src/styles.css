@@ -179,6 +179,21 @@ ul { list-style: none; }
   --card-border-hover: rgba(255, 61, 104, 0.25);
   --header-bg: #ffffff;
 }
+
 @media (max-width: 768px) {
   .container { padding-inline: 1.25rem; }
+}
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .section-title { font-size: clamp(1.4rem, 6vw, 1.8rem); margin-bottom: 1.75rem; }
+  .section-tag { font-size: .7rem; }
+  .btn { padding: .7rem 1.25rem; font-size: .85rem; }
+  h1 { word-break: break-word; }
+}
+@media (max-width: 380px) {
+  .container { padding-inline: 1rem; }
 }

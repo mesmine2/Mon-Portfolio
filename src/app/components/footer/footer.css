@@ -1,4 +1,8 @@
-.footer { padding-block: 2rem; border-top: 1px solid var(--border); }
+.footer {
+  padding-block: 2rem;
+  background: var(--header-bg);
+  border-top: 1px solid var(--border);
+}
 .footer-inner {
   display: flex;
   justify-content: space-between;
