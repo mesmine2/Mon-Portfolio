@@ -1,0 +1,37 @@
+<section id="skills" class="skills">
+  <div class="container">
+    <div class="skills-header">
+      <div>
+        <span class="section-tag">✦ Stack Technique & Maîtrise</span>
+        <h2 class="section-title" style="margin-bottom:0">Skills & Technologies</h2>
+      </div>
+      <span class="badge skills-context-badge">Angular 17/18 • Architecture Réactive & SSR</span>
+    </div>
+
+    <div class="skills-grid">
+      @for (group of groups; track group.title) {
+        <div class="skill-card">
+          <div class="skill-card-head">
+            <h3>{{ group.title }}</h3>
+            <span class="badge count-badge">{{ group.count }}</span>
+          </div>
+          <p class="skill-card-desc">{{ group.description }}</p>
+
+          <ul class="skill-list">
+            @for (item of group.items; track item.name) {
+              <li>
+                <span class="skill-left">
+                  <span class="tech-badge" [style.background]="getTechIcon(item.name).color">
+                    {{ getTechIcon(item.name).label }}
+                  </span>
+                  <span class="skill-name">{{ item.name }}</span>
+                </span>
+                <span class="badge level-badge" [class]="'level-' + item.level">{{ item.level }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</section>

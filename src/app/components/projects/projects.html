@@ -1,0 +1,60 @@
+<section id="projects" class="projects">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <span class="section-tag">✦ Portfolio & Réalisations Clés</span>
+        <h2 class="section-title" style="margin-bottom:0">Projets Récents</h2>
+      </div>
+      <p class="projects-note">
+        Chaque projet est présenté avec les <strong>2 premières pages clés</strong>
+        et un accès direct au code et à la démo.
+      </p>
+    </div>
+
+    <div class="projects-list">
+      @for (project of projects; track project.title) {
+        <article class="project-card">
+          <div class="project-preview">
+            @for (img of project.images; track img; let i = $index) {
+              <div class="preview-frame">
+                <span class="page-label">Page {{ (i + 1) < 10 ? '0' + (i+1) : (i+1) }}</span>
+                <img [src]="img" [alt]="project.title + ' aperçu ' + (i + 1)" loading="lazy" />
+              </div>
+            }
+          </div>
+
+          <div class="project-info">
+            <span class="project-category">{{ project.category }}</span>
+            <h3>{{ project.title }}</h3>
+            <p class="project-desc">{{ project.description }}</p>
+
+            <div class="tech-tags">
+              @for (t of project.techs; track t) {
+                <span class="tech-tag">
+                  <span class="tech-badge" [style.background]="getTechIcon(t).color">
+                    {{ getTechIcon(t).label }}
+                  </span>
+                  {{ t }}
+                </span>
+              }
+            </div>
+
+            <div class="project-actions">
+              <a [href]="project.demoUrl" target="_blank" class="btn btn-primary">
+                <span class="btn-icon" [innerHTML]="icons.externalLink"></span>
+                Démo (Vercel)
+              </a>
+              <a [href]="project.githubUrl" target="_blank" class="btn btn-outline">
+                <span class="btn-icon" [innerHTML]="icons.github"></span>
+                Code (GitHub)
+              </a>
+              <button class="icon-btn expand-btn" aria-label="Voir en détail">
+                <span [innerHTML]="icons.expand"></span>
+              </button>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

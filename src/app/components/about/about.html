@@ -1,0 +1,46 @@
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div class="about-text">
+      <span class="section-tag">✦ Bio & Philosophie</span>
+      <h2 class="section-title">A propos de moi</h2>
+
+      <div class="about-lead">
+        <p>
+          Étudiant en Informatique | Systèmes Embarqués, IA & Développement Web.
+          Passionné par les nouvelles technologies, je suis actuellement étudiant en
+          <strong>Licence 2 Informatique</strong> à l'Université de Douala
+          (parcours Systèmes Embarqués et Intelligence Artificielle — 2025-2026),
+          spécialisé en <strong>Angular (v17/v18)</strong> et <strong>TypeScript</strong>.
+        </p>
+      </div>
+
+      <p class="about-p muted">
+        En parallèle de mon cursus académique, je renforce mes compétences techniques
+        sur le terrain : je suis une formation intensive en développement front-end
+        avec Angular à l'Orange Digital Center. Curieux et rigoureux, j'aime concevoir
+        des solutions technologiques innovantes, allant de la programmation bas niveau
+        aux interfaces web modernes et interactives.
+      </p>
+
+      <ul class="highlights">
+        @for (h of highlights; track h.label) {
+          <li>
+            <span class="check-icon" [innerHTML]="icons.check | safeHtml"></span>
+            {{ h.label }}
+          </li>
+        }
+      </ul>
+
+      <a href="/cv.pdf" download class="btn btn-outline">
+        <span class="btn-icon" [innerHTML]="icons.download | safeHtml"></span>
+        Télécharger mon CV
+      </a>
+    </div>
+
+    <div class="about-illustration">
+      <svg viewBox="0 0 300 300" class="illustration-placeholder-round">
+        <circle cx="150" cy="150" r="140" fill="var(--bg-card-alt)" />
+      </svg>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,184 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  transition: background .25s ease, color .25s ease;
+  position: relative;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(255, 61, 104, 0.16), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(123, 47, 247, 0.18), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255, 122, 69, 0.08), transparent 50%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+:root.light-theme body {
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(255, 61, 104, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(123, 47, 247, 0.08), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255, 122, 69, 0.05), transparent 50%);
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+/* ===== THEME TOKENS — DARK (défaut) ===== */
+:root {
+  --bg: #0b0e14;
+  --bg-soft: #11141d;
+  --bg-card: #171a24;
+  --bg-card-alt: #1c1330;
+
+  --text: #f5f5f7;
+  --text-muted: #a8adbb;
+
+  --border: #262b38;
+
+  --brand-1: #ff3d68;
+  --brand-2: #7b2ff7;
+  --brand-gradient: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+
+  --accent-orange: #ff7a45;
+  --success: #22c55e;
+  --success-bg: rgba(34,197,94,0.12);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+  --container: 1200px;
+}
+
+/* ===== THEME TOKENS — LIGHT ===== */
+:root.light-theme {
+  --bg: #f2ede6;
+  --bg-soft: #ffffff;
+  --bg-card: #fbf8f4;
+  --bg-card-alt: #f4ece3;
+
+  --text: #1c1c1e;
+  --text-muted: #6b6b6b;
+
+  --border: #e6ddd2;
+
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== UTILITAIRES ===== */
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+.gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .8rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 600;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .9rem;
+  transition: transform .15s ease, opacity .15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  background: var(--brand-gradient);
+  color: #fff;
+}
+.btn-outline {
+  background: var(--bg-soft);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.section-tag {
+  color: var(--brand-1);
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+}
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+}
+
+/* ===== FIX ICÔNES : taille garantie même via [innerHTML] ===== */
+.icon-btn svg,
+.btn-icon svg,
+.check-icon svg,
+.social-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  color: inherit;
+}
+.icon-btn {
+  color: var(--text);
+}
+.icon-btn span,
+.btn-icon,
+.check-icon,
+.social-icon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+/* Badge icône technologie (carré coloré + libellé court) */
+.tech-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.02em;
+}
+/* ===== SURFACE DE CARTE AVEC GRADIENT (remplace le --bg-card plat) ===== */
+:root {
+  --card-gradient: linear-gradient(160deg, #1b1f2c 0%, #191424 55%, #150f22 100%);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border-hover: rgba(255, 61, 104, 0.35);
+  --header-bg: #0d0517;
+}
+:root.light-theme {
+  --card-gradient: linear-gradient(160deg, #ffffff 0%, #fdf6f2 55%, #f7ecf5 100%);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --card-border-hover: rgba(255, 61, 104, 0.25);
+  --header-bg: #ffffff;
+}
+@media (max-width: 768px) {
+  .container { padding-inline: 1.25rem; }
+}
