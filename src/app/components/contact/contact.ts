@@ -19,10 +19,10 @@ export class Contact {
   private readonly MY_EMAIL = 'mesminekamtcha@gmail.com';
 
   socials: SocialLink[] = [
-    { icon: this.icons.github, url: 'https://github.com/TON-USER', label: 'GitHub' },
-    { icon: this.icons.whatsapp, url: 'https://wa.me/237XXXXXXXXX', label: 'WhatsApp' },
-    { icon: this.icons.telegram, url: 'https://t.me/TON-USER', label: 'Telegram' },
-  ];
+  { icon: this.icons.github, url: 'https://github.com/mesmine2', label: 'GitHub' },
+  { icon: this.icons.whatsapp, url: 'https://wa.me/237688095737', label: 'WhatsApp' },
+  { icon: this.icons.linkedin, url: 'www.linkedin.com/in/mesmine-kamtcha', label: 'LinkedIn' },
+];
 
   onSubmit() {
     const subject = encodeURIComponent(`Message de ${this.form.name} — Portfolio`);
