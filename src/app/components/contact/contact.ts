@@ -16,13 +16,20 @@ export class Contact {
   icons = ICONS;
   form = { name: '', email: '', message: '' };
 
+  private readonly MY_EMAIL = 'mesminekamtcha@gmail.com';
+
   socials: SocialLink[] = [
-    { icon: this.icons.github, url: 'https://github.com/mesmine2', label: 'GitHub' },
-    { icon: this.icons.whatsapp, url: 'https://wa.me/237688095737', label: 'WhatsApp' },
-    { icon: this.icons.telegram, url: 'https://t.me/237688095737', label: 'Telegram' },
+    { icon: this.icons.github, url: 'https://github.com/TON-USER', label: 'GitHub' },
+    { icon: this.icons.whatsapp, url: 'https://wa.me/237XXXXXXXXX', label: 'WhatsApp' },
+    { icon: this.icons.telegram, url: 'https://t.me/TON-USER', label: 'Telegram' },
   ];
 
   onSubmit() {
-    console.log(this.form);
+    const subject = encodeURIComponent(`Message de ${this.form.name} — Portfolio`);
+    const body = encodeURIComponent(
+      `Nom : ${this.form.name}\nEmail : ${this.form.email}\n\nMessage :\n${this.form.message}`
+    );
+    // ouvre directement le client mail du visiteur, comme wa.me pour WhatsApp
+    window.location.href = `mailto:${this.MY_EMAIL}?subject=${subject}&body=${body}`;
   }
 }
