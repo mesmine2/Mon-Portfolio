@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mon-portfolio-pkmc1.vercel.app/sitemap.xml
