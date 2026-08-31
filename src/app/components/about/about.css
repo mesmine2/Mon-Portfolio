@@ -125,9 +125,12 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--brand-gradient);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    rgba(123, 47, 247, 0.35) 100%
+  );
   mix-blend-mode: multiply;
-  opacity: .5;
   z-index: 2;
   pointer-events: none;
 }
@@ -141,7 +144,7 @@
   display: block;
   position: relative;
   z-index: 1;
-  filter: contrast(1.05) saturate(1.1);
+  filter: none; 
 }
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; align-items: initial; }

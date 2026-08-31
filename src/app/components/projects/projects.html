@@ -41,15 +41,15 @@
 
             <div class="project-actions">
               <a [href]="project.demoUrl" target="_blank" class="btn btn-primary">
-                <span class="btn-icon" [innerHTML]="icons.externalLink"></span>
+                <span class="btn-icon" [innerHTML]="icons.externalLink | safeHtml"></span>
                 Démo (Vercel)
               </a>
               <a [href]="project.githubUrl" target="_blank" class="btn btn-outline">
-                <span class="btn-icon" [innerHTML]="icons.github"></span>
+                <span class="btn-icon" [innerHTML]="icons.github | safeHtml"></span>
                 Code (GitHub)
               </a>
               <button class="icon-btn expand-btn" aria-label="Voir en détail">
-                <span [innerHTML]="icons.expand"></span>
+                <span [innerHTML]="icons.expand | safeHtml"></span>
               </button>
             </div>
           </div>
