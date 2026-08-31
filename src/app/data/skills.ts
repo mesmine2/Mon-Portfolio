@@ -12,13 +12,14 @@ export interface SkillGroup {
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     title: 'Langages',
-    count: '4 techs',
+    count: '5 techs',
     description: 'Bases solides & typage strict',
     items: [
       { name: 'TypeScript', level: 'Expert' },
       { name: 'JavaScript (ES6+)', level: 'Expert' },
       { name: 'HTML5 Semantic', level: 'Expert' },
       { name: 'CSS3 / Modern UI', level: 'Avancé' },
+      { name: 'Python', level: 'Intermédiaire' },
     ],
   },
   {
@@ -29,16 +30,17 @@ export const SKILL_GROUPS: SkillGroup[] = [
       { name: 'Angular (17/18)', level: 'Expert' },
       { name: 'RxJS / Signals', level: 'Expert' },
       { name: 'Bootstrap', level: 'Expert' },
-      { name: 'Node.js / Express', level: 'Intermédiaire' },
+      { name: 'Node.js  ', level: 'Intermédiaire' },
     ],
   },
   {
     title: 'Outils & Environnement',
-    count: '2 techs',
+    count: '3 techs',
     description: 'Workflow, test & design-to-code',
     items: [
       { name: 'Git & GitHub CI', level: 'Avancé' },
-      { name: 'Figma to Code', level: 'Avancé' },
+      { name: 'Airtable', level: 'Avancé' },
+      { name: 'Softr', level: 'Avancé' },
     ],
   },
 ];

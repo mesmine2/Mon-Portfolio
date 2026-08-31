@@ -184,7 +184,7 @@ ul { list-style: none; }
   .container { padding-inline: 1.25rem; }
 }
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
