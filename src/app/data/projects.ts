@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
     techs: ['Angular', 'TypeScript', 'RxJS', 'Node.js', 'Vercel', 'Bootstrap'],
     demoUrl: 'https://bilanko-frontend.vercel.app/',
     githubUrl: 'https://github.com/Bilanko-Angular/bilanko-frontend',
-    images: ['assets/projets/bilanko1.png', 'assets/projets/bilanko2.png'],
+    images: ['assets/projets/bilanko1.webp', 'assets/projets/bilanko2.webp'],
   },
   {
     category: 'Application Web',
@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
     techs: ['Angular', 'TypeScript', 'Bootstrp', 'Signals', 'Vercel CI/CD'],
     demoUrl: 'https://delices-douala.vercel.app/',
     githubUrl: 'https://github.com/mesmine2/Delices-Douala',
-    images: ['assets/projets/delice1.png', 'assets/projets/delice2.png'],
+    images: ['assets/projets/delice1.webp', 'assets/projets/delice2.webp'],
   },
   {
     category: 'Outil / Utilitaire web',
@@ -34,6 +34,6 @@ export const PROJECTS: Project[] = [
     techs: ['Angular', 'TypeScript', 'Figma', 'GitHub Actions', 'Vercel'],
     demoUrl: 'https://convertisseurs-monnaie.vercel.app/',
     githubUrl: 'https://github.com/mesmine2/convertisseurs_monnaie',
-    images: ['assets/projets/convertisseur1.png', 'assets/projets/convertisseur2.png'],
+    images: ['assets/projets/convertisseur1.webp', 'assets/projets/convertisseur2.webp'],
   },
 ];
